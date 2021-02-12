@@ -1,33 +1,27 @@
-#include <stdio.h>
+#include <bits/stdc++.h>
+#include<iostream>
+using namespace std;
 
-int main(){
+int main()
+{
+    int n , k ,h,i,j,r;
+    cin >> n >> k ;
+    int  a[n];
+     for ( i=0 ; i<n ; i++)
+    {
+        cin>> a[i];
+    }
+    sort(a,a+n);
+     for (j=0 ; j<n ; j++)
+    {
+        if(k%a[j]==0)
+        {
+            if (h==k) break;
+           // if (h<a[j])
+                h=a[j];
 
-    int n, k;
-    scanf("%d %d",&n,&k);
-
-    int bucket[n], i, minimumTime = 0;
-    for ( i = 0; i < n ; i++ )  scanf("%d",&bucket[i]);
-
-    for (  i = 0 ; i < n ; i++ ){
-
-        if ( k % bucket[i] == 0 ){
-            minimumTime = k / bucket[i];
-            break;
         }
     }
-
-    for ( i = 0; i < n ; i++ ){
-        if ( k % bucket[i] == 0  ){
-
-            int timeForThisBucket = k / bucket[i];
-            if ( timeForThisBucket < minimumTime ){
-                minimumTime = timeForThisBucket;
-            }
-        }
-    }
-
-    printf("%d\n",minimumTime);
-
-
-    //return 0;
+    r= k/h;
+    cout << r;
 }
