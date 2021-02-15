@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 #define ll long long
 #define ld long double
-#define f first
-#define s second
+#define f first 
+#define s second 
 #define IOS ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 using namespace std;
 const ll inf=1e18+5;
