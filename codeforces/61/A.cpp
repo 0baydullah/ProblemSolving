@@ -1,21 +1,13 @@
-#include<stdio.h>
-#include<string.h>
-int main()
+#include <bits/stdc++.h>
+using namespace std;
+
+main()
 {
-    char num1[101];
-    char num2[101];
-  
-    scanf("%s %s",num1,num2);
- 
-    
- 
-    for(int i=0;i<strlen(num1);i++){
-        if(num1[i] == num2[i]){
-            printf("0");
-        }
-        else{
-            printf("1");
-        }
+    char a[101],b[101];
+    cin>> a >>b;
+    for(int i=0; i<strlen(a) ; i++)
+    {
+         a[i]==b[i] ? cout << "0" : cout <<"1";
     }
-    return 0;
+
 }
