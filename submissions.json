@@ -15,6 +15,23 @@
     ],
     "timestamp": "Jul/31/2021 18:15"
   },
+  "CF110418326": {
+    "contest_id": 731,
+    "language": "GNU C++17",
+    "path": "codeforces\\731\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Night at the Museum",
+    "problem_url": "https://codeforces.com/contest/731/problem/A",
+    "submission_id": "CF110418326",
+    "submission_url": "https://codeforces.com/contest/731/submission/110418326",
+    "tags": [
+      "implementation",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Mar/19/2021 11:39"
+  },
   "CF110526012": {
     "contest_id": 581,
     "language": "GNU C++17",
