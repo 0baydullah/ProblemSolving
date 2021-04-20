@@ -2,7 +2,7 @@
 #define endl "\n"
 using namespace std;
 
-void Sort(int a[101], int n);
+void asc_sort(int a[101], int n);
 
 int main ()
 {
@@ -12,12 +12,12 @@ int main ()
     cin >> t;
     while(t--)
     {
-        int sz , j=0;
+        int sz ,temp,j=0;
         cin >> sz;
-        int arr[101] , b[101];
+        int arr[101],a[101] ,b[101];
         for(int i = 0 ; i < sz ; i++)
             cin >> arr[i];
-        Sort(arr,sz);
+        asc_sort(arr,sz);
         for(int i = 0 ; i < sz ; i++)
         {
             if(arr[i]!= arr[i+1])
@@ -38,7 +38,7 @@ int main ()
     return 0;
 }
 
-void Sort(int a[101], int n)
+void asc_sort(int a[101], int n)
 {
  int i, j, temp;
  for(i=0;i< n-1;i++)
