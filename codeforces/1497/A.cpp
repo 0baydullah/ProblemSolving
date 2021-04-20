@@ -3,7 +3,6 @@
 using namespace std;
 
 void bSort(int arr[] , int sz);
-void asc_sort(int a[101], int n);
 
 int main ()
 {
@@ -15,12 +14,11 @@ int main ()
     {
         int sz ,temp,j=0;
         cin >> sz;
-        int arr[101],a[101] ,b[101];
+        int arr[sz],a[101] ,b[101];
         for(int i = 0 ; i < sz ; i++)
             cin >> arr[i];
-            asc_sort(arr,sz);
        // bSort (arr,sz);
-       // sort(arr,arr+sz);
+        sort(arr,arr+sz);
         for(int i = 0 ; i < sz ; i++)
         {
             if(arr[i]!= arr[i+1])
@@ -40,24 +38,6 @@ int main ()
 
     return 0;
 }
-
-void asc_sort(int a[101], int n)
-{
- int i, j, temp;
- for(i=0;i< n-1;i++)
- {
-  for(j=i+1;j< n;j++)
-  {
-   if(a[i]>a[j])
-   {
-    temp = a[i];
-    a[i] = a[j];
-    a[j] = temp;
-   }
-  }
- }
-}
-
 
 void bSort (int arr[] , int sz)
 {
