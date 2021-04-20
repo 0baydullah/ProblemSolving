@@ -2,6 +2,7 @@
 #define endl "\n"
 using namespace std;
 
+void bSort(int arr[] , int sz);
 void asc_sort(int a[101], int n);
 
 int main ()
@@ -17,7 +18,9 @@ int main ()
         int arr[101],a[101] ,b[101];
         for(int i = 0 ; i < sz ; i++)
             cin >> arr[i];
-        asc_sort(arr,sz);
+            asc_sort(arr,sz);
+       // bSort (arr,sz);
+       // sort(arr,arr+sz);
         for(int i = 0 ; i < sz ; i++)
         {
             if(arr[i]!= arr[i+1])
@@ -55,3 +58,19 @@ void asc_sort(int a[101], int n)
  }
 }
 
+
+void bSort (int arr[] , int sz)
+{
+     for (int step = 0; step < (sz-1); ++step)
+     {
+        for (int i = 0; i < sz - (step-1); ++i)
+        {
+            if (arr[i] > arr[i + 1])
+            {
+                int temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+        }
+    }
+}
