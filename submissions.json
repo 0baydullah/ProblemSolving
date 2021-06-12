@@ -15,6 +15,25 @@
     ],
     "timestamp": "Jul/31/2021 18:15"
   },
+  "CF119267791": {
+    "contest_id": 1485,
+    "language": "GNU C++17",
+    "path": "codeforces\\1485\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Add and Divide",
+    "problem_url": "https://codeforces.com/contest/1485/problem/A",
+    "submission_id": "CF119267791",
+    "submission_url": "https://codeforces.com/contest/1485/submission/119267791",
+    "tags": [
+      "brute force",
+      "greedy",
+      "math",
+      "number theory",
+      "*1000"
+    ],
+    "timestamp": "Jun/12/2021 23:01"
+  },
   "CF119268475": {
     "contest_id": 520,
     "language": "GNU C++17",
