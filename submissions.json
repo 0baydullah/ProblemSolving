@@ -15,6 +15,23 @@
     ],
     "timestamp": "Jul/31/2021 18:15"
   },
+  "CF121037364": {
+    "contest_id": 1504,
+    "language": "GNU C++17",
+    "path": "codeforces\\1504\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": " D\u00e9j\u00e0 Vu",
+    "problem_url": "https://codeforces.com/contest/1504/problem/A",
+    "submission_id": "CF121037364",
+    "submission_url": "https://codeforces.com/contest/1504/submission/121037364",
+    "tags": [
+      "constructive algorithms",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Jul/01/2021 21:31"
+  },
   "CF121039335": {
     "contest_id": 1512,
     "language": "GNU C++17",
