@@ -1,4 +1,21 @@
 {
+  "CF123627382": {
+    "contest_id": 1472,
+    "language": "GNU C++17",
+    "path": "codeforces\\1472\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Cards for Friends",
+    "problem_url": "https://codeforces.com/contest/1472/problem/A",
+    "submission_id": "CF123627382",
+    "submission_url": "https://codeforces.com/contest/1472/submission/123627382",
+    "tags": [
+      "greedy",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jul/24/2021 23:02"
+  },
   "CF123635615": {
     "contest_id": 509,
     "language": "GNU C++17",
