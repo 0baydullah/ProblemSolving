@@ -1,4 +1,20 @@
 {
+  "CF123910077": {
+    "contest_id": 707,
+    "language": "GNU C++17",
+    "path": "codeforces\\707\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Brain's Photos",
+    "problem_url": "https://codeforces.com/contest/707/problem/A",
+    "submission_id": "CF123910077",
+    "submission_url": "https://codeforces.com/contest/707/submission/123910077",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Jul/27/2021 14:03"
+  },
   "CF123910732": {
     "contest_id": 1369,
     "language": "GNU C++17",
