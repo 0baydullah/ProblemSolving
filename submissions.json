@@ -1,4 +1,20 @@
 {
+  "CF125778217": {
+    "contest_id": 1092,
+    "language": "GNU C++17",
+    "path": "codeforces\\1092\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Teams Forming",
+    "problem_url": "https://codeforces.com/contest/1092/problem/B",
+    "submission_id": "CF125778217",
+    "submission_url": "https://codeforces.com/contest/1092/submission/125778217",
+    "tags": [
+      "sortings",
+      "*800"
+    ],
+    "timestamp": "Aug/13/2021 21:56"
+  },
   "CF126343203": {
     "contest_id": 758,
     "language": "GNU C++17",
