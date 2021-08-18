@@ -1,4 +1,17 @@
 {
+  "CF126367629": {
+    "contest_id": 1374,
+    "language": "GNU C++17",
+    "path": "codeforces\\1374\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Required Remainder",
+    "problem_url": "https://codeforces.com/contest/1374/problem/A",
+    "submission_id": "CF126367629",
+    "submission_url": "https://codeforces.com/contest/1374/submission/126367629",
+    "tags": [],
+    "timestamp": "Aug/18/2021 22:53"
+  },
   "CF126368227": {
     "contest_id": 1374,
     "language": "GNU C++17",

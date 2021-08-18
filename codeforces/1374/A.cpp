@@ -2,12 +2,12 @@
 
 using namespace std;
 
-int main() {
-
-	
-	int t;
+int main() 
+{
+    int t;
 	cin >> t;
-	while (t--) {
+	while (t--) 
+	{
 		int x, y, n;
 		cin >> x >> y >> n;
 		if (n - n % x + y <= n) {
