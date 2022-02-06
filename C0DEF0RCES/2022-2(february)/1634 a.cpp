@@ -41,7 +41,7 @@ int main()
         cin >> n >> k;
         string s;
         cin >> s;
-        if(k>1 && !isPal(s))
+        if(k>0 && !isPal(s))
             cout << 2 << endl;
         else cout << 1 << endl;
 
