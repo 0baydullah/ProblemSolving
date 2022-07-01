@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 
 #define endl "\n"
+#define pb push_back
 
 typedef long long ll;
 typedef unsigned long long ull;
@@ -11,12 +12,14 @@ int main()
 {
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
-  //  ll t; cin >> t; while(t--)
+    ll t; cin >> t; while(t--)
     {
-        int n; cin >> n;
-        if(n<=2) cout << -1;
-        else for(int i = n ; i>0 ; i--)
-            cout << i << " ";
+        int i , j; cin >> i >> j;
+        ll sum = j*(j+1)/2;
+        for(int I=2 ; I<=i ; I++)
+        {
+            sum+=j*I;
+        } cout << sum << endl;
     }
 
     return 0;
