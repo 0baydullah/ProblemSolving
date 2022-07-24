@@ -37,11 +37,8 @@ int main()
         ll fucking_answr = call(0,n);
         if(fucking_answr==1)
             printf("There is only 1 way to produce %lld cents change.\n",n);
-        else  printf("There are %lld ways to produce %lld cents change.\n",fucking_answr,n);
+        else  printf("There is only %lld way to produce %lld cents change.\n",fucking_answr,n);
     }
 
     return 0;
 }
-
-
-
