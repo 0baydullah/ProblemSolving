@@ -20,16 +20,10 @@ void miryoku()
     ll x = n/m;
     ll md = n%m;
     ll ans=0;
-    if(n%m==0)
-    {
-        ans = x*(x-1)/2*m;
-    }
-    else{
         ll ansmd = x*(x+1)/2*md;
         ans = x*(x-1)/2*(m-md);
         ans+=ansmd;
-    }
-    
+  
     cout << ans << " " << mx << endl;
 }
 
