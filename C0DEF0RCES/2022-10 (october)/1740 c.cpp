@@ -14,7 +14,14 @@ using namespace std;
 
 void miryoku()
 {
-    
+    int n; cin >> n;
+    ll a[n];
+    for(int i=0 ;i<n; i++) cin >> a[i];
+    sort(a,a+n);
+  //  cout <<"******" << endl;
+//for(int i=0 ; i<n ;i++) cout << a[i] << " " ; cout << endl;
+    ll ans = llabs(a[n-1]-a[n-2]) + llabs(a[0]-a[n-1]);
+    cout << ans <<endl;
 }
 
 int main()

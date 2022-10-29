@@ -14,7 +14,10 @@ using namespace std;
 
 void miryoku()
 {
-    
+    int n;
+    cin >> n;
+    if(n<=13) cout << 7 << endl;
+    else cout << 2 << endl;
 }
 
 int main()

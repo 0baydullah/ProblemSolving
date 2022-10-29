@@ -14,7 +14,15 @@ using namespace std;
 
 void miryoku()
 {
-    
+    ll n; cin >> n;
+    ll xsum=0, ymx=0;
+    for(int i=0 ; i<n ;i++)
+    {
+        ll x, y; cin >> x >> y;
+        if(x>y) swap(x,y);
+        xsum+=x; ymx=max(ymx,y);
+    }
+    cout << (xsum*2) + (ymx*2) << endl;
 }
 
 int main()
