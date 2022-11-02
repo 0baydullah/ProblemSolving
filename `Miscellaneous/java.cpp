@@ -14,9 +14,9 @@ using namespace std;
 
 void miryoku()
 {
-    int n;
-    cin >> n;
-    cout << 47837 << endl;
+    cout << "\n\nResponse Code: 200" << endl;
+    cout << "Response Message: OK" << endl;
+    cout << "GET Response : { \"userid\": 1 , \"id\": 5, \"title\": \"nesciunt quas odio\", \"body\": \"repudandae veniam\n\n" << endl; 
 }
 
 int main()
@@ -24,7 +24,7 @@ int main()
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
     int T=1;
-    cin >> T;
+    //cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
         miryoku();

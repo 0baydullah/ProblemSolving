@@ -20,8 +20,15 @@ void miryoku()
     sort(a,a+n);
   //  cout <<"******" << endl;
 //for(int i=0 ; i<n ;i++) cout << a[i] << " " ; cout << endl;
-    ll ans = llabs(a[n-1]-a[n-2]) + llabs(a[0]-a[n-1]);
-    cout << ans <<endl;
+    ll ans = 0;
+
+    for(int i=0 ; i+2<n ; i++){
+        ans=max(ans,a[n-1]-a[i]+a[i+1] - a[i]);
+    }
+    for(int i=2 ; i<n ; i++){
+        ans = max(ans,a[i] - a[0 ] + a[i] - a[i-1]);
+    }
+    cout << ans << endl;
 }
 
 int main()
