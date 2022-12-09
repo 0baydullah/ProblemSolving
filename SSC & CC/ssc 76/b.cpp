@@ -12,24 +12,27 @@
 
 using namespace std;
 
-ll jichidi(ll a,ll b){
-    if(b==0) return a;
-    return jichidi(b,a%b);
-}
-
 int main()
 {
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
     int T=1;
-    cin >> T;
+    //cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-    ll a, b; cin >> a >> b;
-    ll x = jichidi(a,b);
-    ll y =a*b/x;
-    if(x==a) cout << x <<" " << y << endl;
-    else cout << -1 << endl;
+        int n; cin >> n;
+     //   int a[n];
+
+        ll m=0,e=0,c=0;
+        for(int i=0 ; i<n; i++){
+            ll x; cin >> x;
+            m+=abs(x);
+            e+=abs(x)*abs(x);
+            c= max(abs(x),c);
+        }
+        cout << m << endl;
+        cout << fixed << setprecision(10) << sqrt(e) << endl;
+        cout << c << endl;
     }
 
     return 0;
