@@ -39,7 +39,7 @@ int main()
                 else l = i;
             }
         } 
-        cout << "------" << cnt << " dfd";
+    //    cout << "------" << cnt << " dfd";
         if(cnt==1) cout << "YES\n";
         else cout << "NO\n";
     }

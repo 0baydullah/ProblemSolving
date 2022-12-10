@@ -20,9 +20,21 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        int a , c ; cin >> a >> c;
-        if(a==c) cout << c << endl;
-        
+        int n, a , b;
+        cin >> n >> a >> b;
+        int cnt{0};
+        int N=n;
+        if(b>=a and n>a) cout << -1 << endl;
+        else{
+            for(int i=0 ; i<=n ;){
+                i+=a;
+                cnt++;
+                if(i>=n){
+                    cout << cnt << endl;
+                    break;
+                }else i-=b;
+            }
+        }
     }
 
     return 0;

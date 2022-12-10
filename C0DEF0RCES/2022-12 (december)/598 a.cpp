@@ -20,9 +20,13 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        int a , c ; cin >> a >> c;
-        if(a==c) cout << c << endl;
-        
+        ll n; cin >> n;
+        ll sub{0};
+        for(int i=0 ; ; i++){
+            if(1<<i > n) break;
+            sub+=1<<i;
+        }
+        cout << ((n+1)*n/2)-(2*sub) << endl;
     }
 
     return 0;

@@ -31,7 +31,6 @@ int main()
        bool flag=0;
         for(int i=1 ; i<100000 ; i++){
             su+=i;
-            v.pb(su);
             if(su==sum)flag=1;
         }
         if(flag) cout << "YES\n";

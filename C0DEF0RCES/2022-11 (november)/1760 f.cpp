@@ -70,8 +70,9 @@ int main()
     }
     if(total>=c){
         cout << "Infinity" << endl;
+        continue;
     }
-    ll ans =-1,l=0,h=(int)1e12;
+    ll ans =-1,l=0,h=1000000000000;
     while(l<=h){
         ll mid = l+(h-l)/2;
         if(possible(a,n,d,c,mid+1)){

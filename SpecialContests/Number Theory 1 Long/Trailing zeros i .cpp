@@ -25,7 +25,7 @@ int NOD(int n){
             while(n%primes[i] == 0){
                 n/= primes[i];
                 k++;
-                if(n==0 or n==1) break;
+               // if(n==0 or n==1) break;
             }
             divisor *= k;
         }
