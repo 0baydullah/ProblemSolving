@@ -20,9 +20,15 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        int n,m; cin >> n >> m;
+        int n; cin >> n;
+        int a[n];
+        for(int i=0 ; i<n; i++) cin >> a[i];
+        //sort(a,a+n);
+        if(a[0]!=n and a[n-1]!=n) cout << -1 << endl;
+        else {
+            for(int i=n-1 ; i>=0 ;i--) cout << a[i] << " ";cout << endl;
+        }
         
-        cout << (n==1 and m==1? 0 : min(2,min(n,m))) << endl;
     }
 
     return 0;

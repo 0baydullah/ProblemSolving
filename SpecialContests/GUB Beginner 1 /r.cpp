@@ -20,9 +20,16 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        int n,m; cin >> n >> m;
-        
-        cout << (n==1 and m==1? 0 : min(2,min(n,m))) << endl;
+        int a,b; cin >> a >> b;
+        int Xor;
+        if(a%4==1) Xor=a-1;
+        else if(a%4==2) Xor =1;
+        else if(a%4==3) Xor=a;
+        else Xor =0;
+
+        if(Xor==b) cout << a << endl;
+        else if((Xor^b) !=a) cout << a+1 << endl;
+        else cout << a+2 << endl;
     }
 
     return 0;

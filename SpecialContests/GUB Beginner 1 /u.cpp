@@ -17,12 +17,12 @@ int main()
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
     int T=1;
-    cin >> T;
+    //cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        int n,m; cin >> n >> m;
-        
-        cout << (n==1 and m==1? 0 : min(2,min(n,m))) << endl;
+        int n; cin >> n;
+        int k=n/2;
+        cout << (n&1? 2*(k+1)*(k+2) : (k+1)*(k+1)) << endl;
     }
 
     return 0;

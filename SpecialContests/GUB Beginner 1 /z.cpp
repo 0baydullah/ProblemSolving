@@ -20,9 +20,11 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        int n,m; cin >> n >> m;
-        
-        cout << (n==1 and m==1? 0 : min(2,min(n,m))) << endl;
+        int n, k; cin >> n >> k;
+        const int mod = 1e9+7;
+        ll ans =1; 
+        for(int i=0 ; i<k; i++)ans=(ans*n)%mod;
+        cout << ans << endl;
     }
 
     return 0;

@@ -20,9 +20,13 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        int n,m; cin >> n >> m;
-        
-        cout << (n==1 and m==1? 0 : min(2,min(n,m))) << endl;
+        ll n; cin >> n;
+        n-=1;
+        ll lg=log2(n);
+        lg=1LL<<lg;
+        for(int i=n ; i>=lg ; i--) cout << i << " ";
+        for(int i=0; i<=lg-1 ;i++) cout << i << " ";
+        cout << endl;
     }
 
     return 0;
