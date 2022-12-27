@@ -27,21 +27,21 @@ int main()
         for(int i=0 ; i<n; i++)cin >> dope[i];
         int score_clod{0},score_dope{0};
         bool flag=0;
-        if(n<3){
-            for(int i=0 ; i<n; i++){
-                if(clod[i]==6) flag=1;
-                if(flag)score_clod+=clod[i];
-            }
-            flag=0;
-            for(int i=0 ; i<n; i++){
-                if(dope[i]==6) flag=1;
-                if(flag)score_dope+=dope[i];
-            }
-            if(score_clod>score_dope) cout << "Clod\n";
-        else if (score_clod<score_dope) cout << "Dope\n";
-        else cout << "Draw\n";
-        }
-        else{
+        // if(n<3){
+        //     for(int i=0 ; i<n; i++){
+        //         if(clod[i]==6) flag=1;
+        //         if(flag)score_clod+=clod[i];
+        //     }
+        //     flag=0;
+        //     for(int i=0 ; i<n; i++){
+        //         if(dope[i]==6) flag=1;
+        //         if(flag)score_dope+=dope[i];
+        //     }
+        //     if(score_clod>score_dope) cout << "Clod\n";
+        // else if (score_clod<score_dope) cout << "Dope\n";
+        // else cout << "Draw\n";
+        // }
+         //else{
             for(int i=0 ; i<n; i++){
             if(clod[i]==6 && clod[i+1]==6 && clod[i+2]==6){
                 i+=2;
@@ -66,7 +66,7 @@ int main()
         if(score_clod>score_dope) cout << "Clod\n";
         else if (score_clod<score_dope) cout << "Dope\n";
         else cout << "Draw\n";
-        }
+      //  }
         
     }
 

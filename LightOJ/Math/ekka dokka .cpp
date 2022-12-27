@@ -19,15 +19,20 @@ int main()
     int T=1;
     cin >> T;
     for(int t=1 ; t <= T ; t++){
-    //  cout << "Case " << t << ": ";
-        int n; cin >> n;
-        ll a[n],cnt{0};
-        for(int i=0 ; i<n; i++){
-            cin>> a[i];
-            cnt+=a[i];
+      cout << "Case " << t << ": ";
+        ll w; cin >> w;
+        ll a,b;
+        if(w&1){
+            cout << "Impossible\n";
         }
-        int zero =n-(cnt%n);
-        cout << (ll)(n-zero)*zero << endl;
+        else{
+         a=w/2,b=2;
+            while(!(a&1)){
+                a/=2;
+                b*=2;
+            }
+            cout << a << " " << b << endl;
+        }
     }
 
     return 0;

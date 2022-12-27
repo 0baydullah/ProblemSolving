@@ -20,21 +20,15 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        ll n ;cin >> n;
-        ll a[n];
-        ll mx=-1;
-        for(int i=0 ; i<n; i++){
+        ll n ;cin >> n; 
+        ll a[n]; ll prod=1;
+        for(int i=0 ; i<n; i++) {
             cin >> a[i];
+            prod *=a[i];
         }
-        vector<pair<ll,ll>>v;
-        for(int i=0 ; i<n ; i++){
-            ll x= 1LL<<((ll)log2(a[i])+1);
-            if(x-a[i]!=0)v.pb({i+1,x-a[i]});
-        }
-        cout << v. size() << endl;
-        for(auto u:v){
-            cout << u.first << " " << u.second << endl;
-        }
+        prod += n-1;
+        cout << prod*2022LL << endl;
     }
+
     return 0;
 }

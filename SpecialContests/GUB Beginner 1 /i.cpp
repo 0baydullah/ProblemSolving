@@ -20,9 +20,9 @@ int main()
     //cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        int n, s; cin >> n , s;
+        int n, s; cin >> n >> s;
         int x=3*n;
-        cout << x <<" " << n << " " << s << endl;
+       // cout << x <<" " << n << " " << s << endl;
         if(x>s) cout << x-s << endl;
         else cout << 0 << endl;
     }
