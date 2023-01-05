@@ -1,28 +1,39 @@
-#include <bits/stdc++.h>
+#include "bits/stdc++.h"
 using namespace std;
-const int N = 1e5+7;
-int prime[N];
 
-void sieve(int n){
-    for(int i=2; i<=n; i++){
-        if(prime[i]==0){
-            for(int j=i*i ; j<=n ; j+=i){
-                prime[j]=1;
+
+#define SZ 100000007
+int MARK[SZ+1];
+vector<int>PRIME;
+
+void sieve(){
+    MARK[0]=MARK[1]=1;
+    int root = sqrt(SZ);
+
+    for(int i=4 ; i<SZ ; i+=2) MARK[i]=1;
+    for(int i=3 ; i<=root ; i+=2){
+        if(!MARK[i]){
+            for(int j=i*i ; j<=SZ ; j+=i*2){
+                MARK[j]=1;
             }
         }
     }
+    
+    PRIME.push_back(2);
+    for(int i=3 ; i<=SZ ; i+=2)
+        if(!MARK[i])
+            PRIME.push_back(i);
 
-    if(n>=2){
-        cout << 2 << endl;
-    }
-    for(int i=3 ; i<=n ; i+=2){
-        if(prime[i]==0){
-            cout << i << " ";
-        }
-    } cout << endl;
+    return;
 }
 
-int main(){
-    int n ; cin >> n;
-    sieve(n);
+int main()
+{
+    ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
+
+    sieve();
+    for(auto x:PRIME)
+        cout << x << " " ;
+
+    return 0; 
 }
