@@ -1,26 +1,28 @@
-#include <bits/stdc++.h>
+#include "bits/stdc++.h"
 
-/**
- * Returns the total number of problems.
- *
- * @param a denotes the number of problems in the first computer
- * @param b denotes the number of problems in the second computer
- */
-int sum(int a, int b) {
-    // Implement this method
-    return a+b;
-}
+#define endl "\n"
+#define pb push_back
 
-/**
- * Takes care of the problem input and output.
- */
-int main() {
-    int cases;
-    scanf("%d", &cases);
-    for (int caseno = 1; caseno <= cases; ++caseno) {
-        int a, b;
-        scanf("%d %d", &a, &b);
-        printf("Case %d: %d\n", caseno, sum(a, b));
+#define PI acos(-1)
+#define gcd(a,b) __gcd(a,b)
+#define lcm(a,b) (a*b)/gcd(a,b)
+
+#define ll long long
+#define ull unsigned long long
+
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
+
+    int T=1;
+    cin >> T;
+    for(int t=1 ; t <= T ; t++){
+      cout << "Case " << t << ": ";
+        int a,b; cin >> a >> b;
+        cout << a+b << endl;
     }
+
     return 0;
 }

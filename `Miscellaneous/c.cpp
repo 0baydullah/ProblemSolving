@@ -1,49 +1,43 @@
-#include "bits/stdc++.h"
-
-#define endl "\n"
-#define pb push_back
-
-#define PI acos(-1)
-#define gcd(a,b) __gcd(a,b)
-#define lcm(a,b) (a*b)/gcd(a,b)
-
-#define ll long long
-#define ull unsigned long long
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
-int main()
-{
-    ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
-
-    int T=1;
-    //cin >> T;
-    for(int t=1 ; t <= T ; t++){
-    //  cout << "Case " << t << ": ";
-        int n; cin >> n;
-        if(n<100){
-            cout << 99 << endl;
-            return 0;
+// Returns true if the permutation is sorted, false otherwise
+bool is_sorted(vector<int>& permutation) {
+    for (int i = 0; i < permutation.size(); i++) {
+        if (permutation[i] != i+1) {
+            return false;
         }
-        string a,b,c,tmp;
-        tmp=to_string(n);
-        tmp[tmp.size()-1]='9'; 
-        tmp[tmp.size()-2]='9';
-        b=tmp;
-        tmp[tmp.size()-3]+=1;
-        c=tmp;
-                tmp[tmp.size()-3]-=1;
-        a=tmp;
-        int aa,bb,cc;
-        aa=a.to_int;
-        bb=b.to_int;
-        cc=c.to_int;
-        aa = abs(n-aa);
-        bb= abs(n-bb);
-        cc= abs(n-cc);
-        if()
-
     }
+    return true;
+}
 
+int min_operations(vector<int>& permutation, int k) {
+    int steps = 0;
+    while (!is_sorted(permutation)) {
+        int i = 0;
+        while (i < permutation.size() && permutation[i] == i+1) {
+            i++;
+        }
+        // move the elements before the longest sorted suffix to the end
+        rotate(permutation.begin(), permutation.begin() + i, permutation.end());
+        steps++;
+    }
+    return steps;
+}
+
+int main() {
+    int t;
+    cin >> t;
+    for (int i = 0; i < t; i++) {
+        int n, k;
+        cin >> n >> k;
+        vector<int> permutation(n);
+        for (int j = 0; j < n; j++) {
+            cin >> permutation[j];
+        }
+        cout << min_operations(permutation, k) << endl;
+    }
     return 0;
 }
