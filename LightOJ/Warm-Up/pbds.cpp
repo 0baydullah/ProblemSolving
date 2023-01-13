@@ -34,8 +34,11 @@ int main()
     //order_of_key returns the position of a given element
     cout << s.order_of_key(69) << endl << endl; //6
 
-    cout << s.order_of_key(99) << endl;
-    cout << s.order_of_key(96) << endl;
+
+    // If the element does not appear in the set, 
+    //we get the position that the element would have in the set:
+    cout << s.order_of_key(99) << endl; //8
+    cout << s.order_of_key(96) << endl; //7
     
 
     return 0;
