@@ -25,7 +25,7 @@ int main()
         double r,ab;
         r= sqrt(pow(ox-ax,2)+pow(oy-ay,2));
         ab= sqrt(pow(bx-ax,2)+pow(by-ay,2));
-        double angle = acos((r*r)+(r*r)-(ab*ab))/2*r*r;
+        double angle = acos(((r*r)+(r*r)-(ab*ab))/(2*r*r));
         cout << fixed << setprecision(8) << angle*r << endl;
     }
 
