@@ -1,34 +1,23 @@
-#include "bits/stdc++.h"
-
-#define endl "\n"
-#define pb push_back
-
-#define PI acos(-1)
-#define gcd(a,b) __gcd(a,b)
-#define lcm(a,b) (a*b)/gcd(a,b)
-
-#define ll long long
-#define ull unsigned long long
-
+#include<bits/stdc++.h>
 using namespace std;
 
-void miryoku()
-{
-    cout << "\n\nResponse Code: 200" << endl;
-    cout << "Response Message: OK" << endl;
-    cout << "GET Response : { \"userid\": 1 , \"id\": 5, \"title\": \"nesciunt quas odio\", \"body\": \"repudandae veniam\n\n" << endl; 
+
+const int N = 1e6 + 9;
+int phi[N];
+void totient() {
+  for (int i = 1; i < N; i++) phi[i] = i;
+  for (int i = 2; i < N; i++) {
+    if (phi[i] == i) {
+      for (int j = i; j < N; j += i) phi[j] -= phi[j] / i;
+    }
+  }
 }
 
-int main()
-{
-    ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
-    int T=1;
-    //cin >> T;
-    for(int t=1 ; t <= T ; t++){
-    //  cout << "Case " << t << ": ";
-        miryoku();
-    }
-
-    return 0;
+int32_t main() {
+  totient(); 
+    int n; cin >> n;
+    cout << phi[n] << endl;
+ 
+  return 0;
 }
