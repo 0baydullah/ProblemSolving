@@ -22,7 +22,7 @@ ll BigMod(ll B, ll P , ll MOD){
 int main(){
     
     ll B,P,MOD;
-    while(cin >> B >> P >> MOD){
-    cout << BigMod(B,P,MOD) << endl;}
+    cin >> B >> P >> MOD;
+    cout << BigMod(B,P,MOD) << endl;
     return 0;
 }

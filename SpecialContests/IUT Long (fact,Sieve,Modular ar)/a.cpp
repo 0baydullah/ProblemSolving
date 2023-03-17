@@ -18,7 +18,7 @@ int main()
 {
    // ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
-    while(scanf("%ld%ld",&a,&b) ){
+    while(scanf("%ld%ld",&a,&b)!= EOF){
       cout << "Case #" << t << ": ";
         ll ans = (a%mod)*(b%mod);
         cout << ans%mod << endl;

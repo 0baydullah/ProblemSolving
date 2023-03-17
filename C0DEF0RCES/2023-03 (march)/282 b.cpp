@@ -16,15 +16,22 @@ int main()
 {
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
-    int T=1;
-    cin >> T;
-    for(int t=1 ; t <= T ; t++){
-      cout << "Case " << t << ": ";
-        int a[3];
-        cin >> a[0]>> a[1] >> a[2];
-        sort(a,a+3);
-        (a[0]*a[0])+(a[1]*a[1]) == a[2]*a[2] ? cout << "yes\n" : cout << "no\n";
+    int n; cin >> n;
+    int aa=0,bb=0;
+    while(n--){
+        int a,b;cin >> a >> b;
+        
+        if(aa+a<=500) 
+            {
+                cout << 'A';
+                aa+=a;
+            }
+        else{
+                cout << 'G';
+                aa-=b;
+            }
     }
+    cout << endl;
 
     return 0;
 }

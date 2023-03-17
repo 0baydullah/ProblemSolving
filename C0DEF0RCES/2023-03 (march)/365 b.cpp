@@ -16,15 +16,18 @@ int main()
 {
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
-    int T=1;
-    cin >> T;
-    for(int t=1 ; t <= T ; t++){
-      cout << "Case " << t << ": ";
-        int a[3];
-        cin >> a[0]>> a[1] >> a[2];
-        sort(a,a+3);
-        (a[0]*a[0])+(a[1]*a[1]) == a[2]*a[2] ? cout << "yes\n" : cout << "no\n";
+    ll n; cin >> n;
+    ll a[n];
+    for(int i=0 ; i<n; i++) cin >> a[i];
+    ll mx=min(2LL,n);
+    ll tmp=2;
+    for(int i=2 ; i<n ;i++){
+        if(a[i]==a[i-1]+a[i-2]){
+            tmp++;
+            mx=max(mx,tmp);
+        }else tmp=2;
     }
-
+    cout << mx << endl;
+    
     return 0;
 }

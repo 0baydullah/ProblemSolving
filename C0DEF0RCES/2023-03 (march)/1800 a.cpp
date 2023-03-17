@@ -21,20 +21,16 @@ int main()
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
         int n; cin >> n;
-        vector<int>v(10000009,0);
-        for(int i=0 ; i<n; i++) cin >> a[i];
-        int k ; cin >> k;
-        int mx=0,smx=0;
-        for(int j=0; j<j+k ; j++){
-            mx=max(smx,a[j]);
-            smx=max(smx,a[j]);
+        string s; cin >> s;
+        string s1="meow",s2="";
+        for(int i=0 ; i<n ; i++){
+            s[i]=tolower(s[i]);
+            if(i>0){
+                if(s[i]==s[i-1])continue;
+            }s2+=s[i];
         }
-        cout << mx << " ";
-        for(int i=1 ;i<(n-k-1) ;i++){
-            if(a[i-1 <smx])
-            mx=max(smx,a[i+k]);
-            smx=max(smx,a[i+k]);
-        }
+        if(s1==s2) cout << "YES\n";
+        else cout << "NO\n";
     }
 
     return 0;

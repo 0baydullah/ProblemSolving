@@ -21,20 +21,14 @@ int main()
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
         int n; cin >> n;
-        vector<int>v(10000009,0);
-        for(int i=0 ; i<n; i++) cin >> a[i];
-        int k ; cin >> k;
-        int mx=0,smx=0;
-        for(int j=0; j<j+k ; j++){
-            mx=max(smx,a[j]);
-            smx=max(smx,a[j]);
-        }
-        cout << mx << " ";
-        for(int i=1 ;i<(n-k-1) ;i++){
-            if(a[i-1 <smx])
-            mx=max(smx,a[i+k]);
-            smx=max(smx,a[i+k]);
-        }
+        int a[n];
+        for(int i=0 ; i<n ;i++) cin >> a[i];
+        int even=0,odd=0;
+        for(int i=0 ; i<n ;i++)
+            if(a[i]&1)odd++;
+            else even++;
+        if(odd &1 and odd!=n)cout << "NO\n";
+        else cout << "Yes\n";
     }
 
     return 0;

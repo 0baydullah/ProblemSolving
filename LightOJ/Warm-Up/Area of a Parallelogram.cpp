@@ -25,9 +25,8 @@ int main()
           dx =   ax + cx -bx;
           dy =   ay + cy -by;
 
-          //  int a = 0.5*(((ax*by)+(bx*cy)+(cx*dy)+(dx*ay))-((ay*bx)+(by*cx)+(cy*dy)+(dy*ax)));
-
-           int a = 0.5*(((ax*by)+(bx*cy)+(cx*dy)+(dx*ay))-((ay*bx)+(by*cx)+(cy*dx)+(dy*ax)));
+            int a = 0.5*(((ax*by)+(bx*cy)+(cx*dy)+(dx*ay))-((ay*bx)+(by*cx)+(cy*dx)+(dy*ax)));
+          //  int a = 0.5*(((ax*by)+(bx*cy)+(cx*dy)+(dx*ay))-((ay*bx)+(by*cx)+(cy*dx)+(dy*ax)));
 
 
           cout << dx << " " << dy << " " << abs(a) << endl;

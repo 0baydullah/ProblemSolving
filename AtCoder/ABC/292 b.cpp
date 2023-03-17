@@ -17,18 +17,24 @@ int main()
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
     int T=1;
-    cin >> T;
-    string x ; getline(cin,x);
+   // cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        int cnt=0;
-        
-        string s; getline(cin,s);
-         for(int i=0 ; i<s.size()-1 ; i++){
-             if(s[i]==' ' and s[i+1]!=' ')cnt ++;
-         }
-         cout << ++cnt << endl;
-       // cout << s << endl;
+        int n,q; cin >> n >> q;
+        map<int,int>m;
+        while(q--){
+            int e, x; cin >> e >> x;
+            if(e==1){
+                m[x]++;
+            }
+            if(e==2){
+                m[x]+=2;
+            }
+            if(e==3){
+                if(m[x]>1) cout << "Yes\n";
+                else cout << "No\n";
+            }
+        }
     }
 
     return 0;

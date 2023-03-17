@@ -19,11 +19,10 @@ int main()
     int T=1;
     cin >> T;
     for(int t=1 ; t <= T ; t++){
-      cout << "Case " << t << ": ";
-        int a[3];
-        cin >> a[0]>> a[1] >> a[2];
-        sort(a,a+3);
-        (a[0]*a[0])+(a[1]*a[1]) == a[2]*a[2] ? cout << "yes\n" : cout << "no\n";
+    //  cout << "Case " << t << ": ";
+        int a,b;cin >> a >> b;
+        if(a*b<=500) cout <<  "YES\n";
+        else cout << "NO\n";
     }
 
     return 0;

@@ -17,14 +17,11 @@ int main()
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
     int T=1;
-    cin >> T;
+   // cin >> T;
     for(int t=1 ; t <= T ; t++){
-      cout << "Case " << t << ": ";
-        int a[3];
-        cin >> a[0]>> a[1] >> a[2];
-        sort(a,a+3);
-        (a[0]*a[0])+(a[1]*a[1]) == a[2]*a[2] ? cout << "yes\n" : cout << "no\n";
+    //  cout << "Case " << t << ": ";
+        cout << (3 << 3) <<endl; 
     }
 
     return 0;
-}
+}   
