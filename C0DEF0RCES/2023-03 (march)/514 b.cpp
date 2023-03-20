@@ -11,14 +11,22 @@
 #define ull unsigned long long
 
 using namespace std;
-int ar[100009];
+
 int main()
 {
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
-    int n; cin >> n;
-    
-    cout << (ll)0x3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f << endl;
-
+    long double n,x,y,a,b;
+    cin >> n >> a >> b;
+    set<long double>s;
+    int flag=0;
+    while(n--){
+        cin >> x >> y;
+        if(y!=b)
+        s.insert((x-a)/(y-b));
+        else flag=1;
+        
+    }
+cout << s.size()+flag << endl;
     return 0;
 }
