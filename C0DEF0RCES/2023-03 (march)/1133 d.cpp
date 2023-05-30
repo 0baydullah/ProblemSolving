@@ -20,10 +20,28 @@ int main()
 {
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
-    int T=18;
-    for(int t=T ; t >=0 ; t--){
-      cout << (t&-t) << " " << t <<endl; 
+    ll n; cin >> n;
+    vector<ll> a(n),b(n);
+    for(int i=0 ; i<n; i++) cin >> a[i];
+    ll z{0};
+    for(int i=0 ; i<n; i++){
+        cin >> b[i];
+        if(!b[i]) z++;
     }
+
+    map<pair<ll,ll>,ll>mp;
+    ll mx{0},d{0};
+
+    for(int i=0; i<n; i++){
+        if(a[i]==0 and b[i]==0) d++;
+        if(a[i]==0 or b[i]==0) continue;
+        ll x= a[i]/gcd(a[i],b[i]);
+        ll y= -b[i]/gcd(a[i],b[i]);
+
+        mp[{y,x}]++;
+        mx=max(mp[{y,x}],mx);
+    }
+    cout << max(z,mx+d) << endl;
 
     return 0;
 }

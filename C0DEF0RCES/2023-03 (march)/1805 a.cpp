@@ -20,9 +20,11 @@ int main()
 {
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
-    int T=18;
-    for(int t=T ; t >=0 ; t--){
-      cout << (t&-t) << " " << t <<endl; 
+    int T=1;
+    cin >> T;
+    for(int t=1 ; t <= T ; t++){
+    //  cout << "Case " << t << ": ";
+        
     }
 
     return 0;

@@ -20,9 +20,20 @@ int main()
 {
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
-    int T=18;
-    for(int t=T ; t >=0 ; t--){
-      cout << (t&-t) << " " << t <<endl; 
+    int T=1;
+    cin >> T;
+    for(int t=1 ; t <= T ; t++){
+    //  cout << "Case " << t << ": ";
+        int n; cin >> n;
+        int a[n+2];
+        int flag=0;
+        for(int i=1 ; i<=n ;i++){
+            cin >> a[i];
+            if(a[i]==1) flag=1;
+            if(i-a[i]>-1)flag =1;
+        }
+        if(flag) cout << "YES\n";
+        else cout << "NO\n";
     }
 
     return 0;
