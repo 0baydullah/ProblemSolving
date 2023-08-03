@@ -31,6 +31,23 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
+        int n;
+        cin >> n;
+
+        ll c{2};
+        while(n%c==0){
+            c++;
+        }
+        string ans="";
+        string voidd="";
+
+        for(int i=0 ; i<c; i++){
+            voidd+=(i+'a');
+        }
+        while(ans.size()<n)
+            ans+=voidd;
+            for(int j=0 ; j<n; j++) cout << ans[j];
+            cout << endl;
         
     }
 

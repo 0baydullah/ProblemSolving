@@ -31,7 +31,19 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        ll n , m , k;
+        cin >> n >> m >> k;
+        ll a,b;
+        cin >> a >> b;
+
+        int flag=1;
+
+        while(k--){
+            ll x,y;
+            cin >> x >> y;
+            if(~(abs(a-x)+abs(b-y))&1)flag=0;
+        }
+        flag ?  printf("YES\n") : printf("NO\n");
     }
 
     return 0;

@@ -28,10 +28,38 @@ int main()
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
     int T=1;
-    cin >> T;
+   // cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        int n; cin >> n;
+        if(n<=1e3-1){
+            cout << n << endl;
+        }
+        else if(n>=1e3 and n<=1e4-1){
+            n/=10;
+            n*=10;
+            cout << n << endl;
+        }else if(n>=1e4 and n<=1e5-1){
+            n/=100;
+            n*=100;
+            cout << n << endl;
+        }else if(n>=1e5 and n<=1e6-1){
+            n/=1000;
+            n*=1000;
+            cout << n << endl;
+        }else if(n>=1e6 and n<=1e7-1){
+            n/=10000;
+            n*=10000;
+            cout << n << endl;
+        }else if(n>=1e7 and n<=1e8-1){
+            n/=100000;
+            n*=100000;
+            cout << n << endl;
+        }else if(n>=1e8 and n<=1e9-1){
+            n/=1000000;
+            n*=1000000;
+            cout << n << endl;
+        }
     }
 
     return 0;

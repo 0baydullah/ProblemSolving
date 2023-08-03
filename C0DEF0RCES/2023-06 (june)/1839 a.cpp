@@ -31,7 +31,9 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        int n, k; 
+        cin >> n >> k;
+        cout << ceil((n-2)/k)+2 << endl;
     }
 
     return 0;

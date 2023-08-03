@@ -23,15 +23,28 @@
 
 using namespace std;
 
+
 int main()
 {
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
-    int T=1;
-    cin >> T;
-    for(int t=1 ; t <= T ; t++){
-    //  cout << "Case " << t << ": ";
-        
+    int n; cin >> n;
+    int mn=1e9+9;
+    vector<pair<int,string>> v;
+    for(int i=0 ; i<n; i++){
+        string x;int y;
+        cin >> x >> y;
+        v.pb({y,x});
+        mn=min(y,mn);
+    }
+    int flag=0;
+    for(auto x : v){
+        if(x.ff==mn)flag=1;
+        if(flag) cout << x.ss << endl;
+    }
+    for(auto x : v){
+        if(x.ff==mn)flag=0;
+        if(flag) cout << x.ss << endl;
     }
 
     return 0;

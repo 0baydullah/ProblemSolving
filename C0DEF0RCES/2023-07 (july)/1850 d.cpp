@@ -31,7 +31,27 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        int n,k; cin >> n >> k;
+        vector<int>v(n),u(n);
+        for(int i=0 ; i<n; i++) cin >>  v[i];
+        int c{0},c2{0};
+        u=v;
+        srt(v);
+        rsrt(u);
+        for(int i=0 ; i<n-1; i++){
+            if(v[i+1]-v[i]<=k){
+                c2++;
+                c=max(c,c2);
+            }else c2=0;
+        }
+        c2=0;
+        for(int i=0 ; i<n-1; i++){
+            if(u[i]-u[i+1]<=k){
+                c2++;
+                c=max(c,c2);
+            }else c2=0;
+        }
+        cout << n-c-1 << endl;
     }
 
     return 0;

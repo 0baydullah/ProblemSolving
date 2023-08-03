@@ -50,8 +50,8 @@ void solve(){
 }
 
 int main(){
-	freopen("in.txt","r",stdin);
-	freopen("out.txt","w",stdout);
+	//freopen("in.txt","r",stdin);
+	//freopen("out.txt","w",stdout);
 	int t; cin >> t;
 	while(t--) solve();
 }

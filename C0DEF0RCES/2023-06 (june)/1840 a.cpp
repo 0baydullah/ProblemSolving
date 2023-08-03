@@ -31,7 +31,31 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        int n; cin >> n;
+        string s; cin >> s;
+        char tmp=s[0]; string ans="";
+        bool flag=1;
+        // for(int i=0 ; i<s.size()-1 ;i++){
+        //     if(s[i] != s[i+1] and flag){
+        //         ans.pb(s[i]);
+        //         flag=0;
+        //     }
+        //     else if(tmp==s[i]){
+        //         tmp=s[i+1];
+        //         flag=1;
+        //     }
+        // }
+        ans.pb(s[0]);
+        for(int i=1 ; i<s.size() ; i++){
+            if(tmp == s[i] ){
+                ans.pb(s[i+1]);
+                tmp=s[i+1];
+                i++;
+            }
+        }
+        for(int i=0; i<ans.size()-1 ; i++)
+        cout << ans[i];
+        cout << endl;
     }
 
     return 0;

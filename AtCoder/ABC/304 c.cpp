@@ -22,17 +22,20 @@
 #define ull unsigned long long
 
 using namespace std;
+int n;
+vector<vector<int>> g;
+vector <int> vis;
 
 int main()
 {
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
-    int T=1;
-    cin >> T;
-    for(int t=1 ; t <= T ; t++){
-    //  cout << "Case " << t << ": ";
-        
-    }
+    int n,d;
+    cin >> n >> d;
+    vis.resize(n);
+    vis.assign(0);
+    g.resize(n);
+
 
     return 0;
 }

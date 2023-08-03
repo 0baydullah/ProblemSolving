@@ -31,7 +31,8 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        int n; cin >> n;
+        cout << (n<5 ? "Bob\n" : "Alice\n") ;
     }
 
     return 0;

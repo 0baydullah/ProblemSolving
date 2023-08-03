@@ -31,7 +31,8 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        ll a,b; cin >> a>> b;
+        cout << a+b << endl;
     }
 
     return 0;

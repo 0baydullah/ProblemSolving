@@ -31,7 +31,26 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        string s; cin >> s;
+        int n=s.size();
+        int m; cin >> m;
+        string l,r; cin >> l >>r;
+        int mx{0};
+        for(int i=0 ; i<m ; i++){
+            int li=l[i]-'0';
+            int ri=r[i]-'0';
+            int nmx=mx;
+            for(int j=li ; j<=ri ; j++){
+                int cur=mx;
+                while(cur<n and s[cur]-'0' != j){
+                    cur+=1;
+                }
+                nmx=max(nmx,cur);
+            }
+            mx=nmx+1;
+        }
+        if(mx>n)cout << "YES" << endl;
+        else cout << "NO" << endl;
     }
 
     return 0;

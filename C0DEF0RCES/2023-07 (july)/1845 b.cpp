@@ -13,15 +13,16 @@
 #define lastone(n) ((n) & (-(n)))
 #define ff first
 #define ss second
-
-#define PI acos(-1)
-#define gcd(a,b) __gcd(a,b)
-#define lcm(a,b) (a*b)/gcd(a,b)
+#define pii pair<int,int>
 
 #define ll long long
 #define ull unsigned long long
 
 using namespace std;
+pii a,b,c;
+int dist(pii a,pii b){
+    return(abs(a.ff-b.ff)+abs(a.ss-b.ss));
+}
 
 int main()
 {
@@ -32,6 +33,8 @@ int main()
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
         
+        cin >> a.ff >>a.ss >> b.ff>>b.ss>>c.ff>>c.ss;
+        cout << (dist(a,b)+dist(a,c)-dist(b,c))/2+1 << endl;
     }
 
     return 0;

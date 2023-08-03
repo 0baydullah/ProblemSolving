@@ -28,10 +28,19 @@ int main()
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
     int T=1;
-    cin >> T;
+   // cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        vector<string>s(7);
+        s={"ACE", "BDF", "CEG", "DFA", "EGB", "FAC", "GBD"};
+        string a; cin >> a;
+        for(auto i:s){
+            if(a==i){
+                cout << "Yes\n";
+                return 0;
+            }
+        }
+        cout << "No\n";
     }
 
     return 0;

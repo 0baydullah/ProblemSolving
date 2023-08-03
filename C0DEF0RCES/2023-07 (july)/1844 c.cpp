@@ -31,7 +31,24 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        int n; cin >> n;
+        vector<ll> v(n);
+        for(int i=0 ; i<n; i++) cin >> v[i];
+
+        ll a=0,b=0;
+
+        for(int i=0; i<n; i++){
+            if(i&1) b+=max(0LL,v[i]);
+            else a+=max(0LL,v[i]);
+        }
+
+        ll ans=max(a,b);
+
+        if(ans==0){
+            srt(v);
+            ans=v[n-1];
+        }
+        cout << ans << endl;
     }
 
     return 0;

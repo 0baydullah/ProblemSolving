@@ -31,7 +31,25 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        ll n , k;
+        cin >> n;
+        k=0;
+        vector<ll>a(n+1,0),b(n+1,-1);
+        map<ll,ll>mp;
+        for(int i=0 ; i<n; i++){
+            cin >> k;
+            if(k<=n){
+                mp[k]++;
+            }
+        }
+        for(int i=1; i<=n; i++){
+            if(!mp[i])continue;
+            for(int j=i ; j<=n; j=j+i)
+                a[j]=a[j]+mp[i];
+        }
+
+
+        cout << *max_element(all(a)) << endl;
     }
 
     return 0;

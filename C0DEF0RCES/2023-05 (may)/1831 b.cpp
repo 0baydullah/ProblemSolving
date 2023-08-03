@@ -38,8 +38,11 @@ int main()
         memset(d,0,sizeof(d));
         for(int i=0 ; i<n; i++)cin>> a[i];
         for(int i=0 ; i<n; i++)cin>> b[i];
-        a[n]=-32;
-        b[n]=-3;
+
+        a[n]=-69;
+        b[n]=-96;
+
+        
         int tmp=1;
         for(int i=0 ; i<n; i++){
             if(a[i]==a[i+1]){

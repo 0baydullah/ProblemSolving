@@ -28,9 +28,28 @@ int main()
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
 
     int T=1;
-    cin >> T;
+    cin >> T; 
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
+        int n, m; cin >> n >> m;
+        int ans=1;
+
+        int ev=1, od=((n/2)*m)+1; 
+
+        for(int i=0 ; i< n; i++){
+            for(int j=0 ; j<m; j++){
+                if(i&1){
+                    cout << ev << " ";
+                    ev++;
+                }
+                else{
+                    cout << od << " ";
+                    od++;
+                }
+            }
+            cout << endl;
+        }
+        cout << endl;
         
     }
 

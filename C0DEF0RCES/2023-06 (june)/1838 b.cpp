@@ -23,6 +23,10 @@
 
 using namespace std;
 
+bool middle(int a, int b , int c){
+    return (a<b and b<c) or (c<b and b<a);
+}
+
 int main()
 {
     ios_base::sync_with_stdio(false);  cin.tie(NULL);  cout.tie(NULL);
@@ -31,7 +35,18 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        int n; cin >> n;
+        vector<int> in(n);
+        for(int i=0 ; i<n; i++) cin >> in[i];
+        int a = find(all(in),1)-in.begin();
+        int b = find(all(in),2)-in.begin();
+        int c = find(all(in),n)-in.begin();
+
+        if(middle(a,c,b))
+            cout << "1 1\n";
+        else if(middle(c,a,b))
+            cout << a+1 << " " << c+1 << endl;
+        else cout << b+1 << " " << c+1 << endl;       
     }
 
     return 0;

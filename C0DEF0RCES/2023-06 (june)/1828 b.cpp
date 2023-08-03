@@ -31,7 +31,14 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        int n; cin >> n;
+
+        int ans=0;
+        for(int i=1; i<=n; i++){
+            int x; cin >> x;
+            ans=gcd(ans,abs(x-i));
+        }
+        cout << ans << endl;
     }
 
     return 0;

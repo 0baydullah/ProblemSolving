@@ -32,6 +32,34 @@ int main()
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
         
+        vector<string>v;
+        map<string,int>m;
+        for(int i=0 ; i<3 ;i++){
+            string a; cin >> a;
+            m[a]++;
+            v.pb(a);
+        }
+        for(int i=0; i<3 ; i++){
+            string s="";
+            for(int j=0 ;j<3 ; j++){
+                s+=v[j][i];
+            }
+            m[s]++;
+        }
+        string x="";
+        x+=v[0][0];
+        x+=v[1][1];
+        x+=v[2][2];
+        m[x]++;
+        string y="";
+        y+=v[0][2];
+        y+=v[1][1];
+        y+=v[2][0];
+        m[y]++;
+        if(m["XXX"]) cout << "X" << endl;
+        else if(m["OOO"])cout << "O" << endl;
+        else if(m["+++"]) cout << "+" << endl;
+        else cout << "DRAW" << endl;
     }
 
     return 0;

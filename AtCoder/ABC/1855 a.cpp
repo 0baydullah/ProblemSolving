@@ -31,7 +31,13 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        int n; cin >> n;
+        int cnt=0;
+        for(int i=1 ; i<=n; i++){
+            int x; cin >> x;
+            if(x==i) cnt++;
+        }
+        cout << (cnt+1)/2 << endl;
     }
 
     return 0;

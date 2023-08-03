@@ -31,8 +31,36 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
-    }
+        int n; cin >> n;
+        int a[n];
+        vector<int>v;
+        for(int i=0 ; i<n; i++){
+            cin >> a[i];
+        }
+        v.pb(a[0]);
+        cout << 1;
+
+        bool flag=1;
+
+        for(int i=1 ; i<n ; i++){
+            if(a[i]>=v.back() and flag){
+                cout << 1;
+                v.pb(a[i]);
+            }
+            else if(a[i]<v.back() and flag and a[i]<=v[0]){
+                cout << 1;
+                flag=0;
+                v.pb(a[i]);
+            }
+            else if(a[i]>=v.back() and a[i]<=v[0]){
+                cout << 1;
+                v.pb(a[i]);
+            }
+            else cout << 0;
+
+        }
+cout << endl;
+    } 
 
     return 0;
 }

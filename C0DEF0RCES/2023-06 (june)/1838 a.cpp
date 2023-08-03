@@ -31,7 +31,17 @@ int main()
     cin >> T;
     for(int t=1 ; t <= T ; t++){
     //  cout << "Case " << t << ": ";
-        
+        int n; cin >> n;
+        vector<int>neg,pos;
+        for(int i=0 ; i<n; i++){
+            int x; cin >> x;
+            if(x<0)neg.pb(x);
+            else pos.pb(x);
+        }
+        srt(neg);
+        srt(pos);
+        if(neg.size()==0) cout << pos[pos.size()-1] << endl;
+        else cout << neg[neg.size()-1] << endl;
     }
 
     return 0;
